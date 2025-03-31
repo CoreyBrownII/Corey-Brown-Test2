@@ -25,10 +25,6 @@ public class CustomerOrderTest {
 	// ToDo: Test placing a valid order
 	// Add items to the order, verify the number of items, and check if the total cost is calculated correctly.
 
-
-	// ToDo: Test paying for the order
-	// Add an item to the order, pay using a method, and verify that the order is marked as paid.
-
 	@Test
 	public void testPlaceOrder() {
 		order.addItem("Pepperoni Pizza", 12.50);
@@ -70,6 +66,13 @@ public class CustomerOrderTest {
 
 	// ToDo: Test order status updates
 	// Set the status of the order and verify that the status is updated correctly.
+
+	@Test
+	public void testOrderStatusUpdate() {
+		order.addItem("Cheese Pizza", 10.00);
+		order.setStatus("Ready");
+		assertEquals("Ready", order.getStatus());
+	}
 
 
 }
